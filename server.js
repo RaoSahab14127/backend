@@ -1,7 +1,6 @@
 
 
   import express from "express";
-  const serverless = require('serverless-http')
   import mongoose from "mongoose";
   import router from "./routes/event.route.js";
   import cors from "cors";
@@ -32,7 +31,7 @@
   app.use(express.urlencoded({ extended: false }));
   
   // Routes
-  app.use("/.netlify/functions/api", router);
+  app.use("/api/uploads/",router);
   
 
-  module.exports.handler = serverless(app)
+app.listen('8000', ()=>{console.log("server is up and running")})

@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "//node_modules//.bin//netlify-lambda serve src",
+    "start": "node ./functions/api.js",
     "build": "netlify deploy --prod"
   },
   "author": "",
