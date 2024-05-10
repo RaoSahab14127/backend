@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 // connectToMongoDB();
 
 // Use the router middleware function
-app.use("/api", router);
+// app.use("/api", router);
 
 // Export the app wrapped with serverless-http
 export default serverless(app);
