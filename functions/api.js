@@ -9,9 +9,9 @@ const app = express();
 dotenv.config();
 
 // Middleware
-app.use(cors({ origin: "*", credentials: true }));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+// app.use(cors({ origin: "*", credentials: true }));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
 
 // Connect to MongoDB
 // const connectToMongoDB = async () => {
