@@ -9,6 +9,15 @@
   const app = express();
   dotenv.config();
   
+
+  // Middleware
+  app.use(cors({ origin: "*", credentials: true }));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
+  
+  // Routes
+  app.use("/api/uploads/",router);
+  
   const connectToMongoDB = async () => {
     try {
       const uri = process.env.MONGOURI;
@@ -25,13 +34,4 @@
     }
   };
   connectToMongoDB();
-  // Middleware
-  app.use(cors({ origin: "*", credentials: true }));
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: false }));
-  
-  // Routes
-  app.use("/api/uploads/",router);
-  
-
 app.listen('8000', ()=>{console.log("server is up and running")})
