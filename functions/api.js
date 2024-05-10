@@ -35,4 +35,4 @@ connectToMongoDB();
 app.use("/api", router);
 
 // Export the app wrapped with serverless-http
-export const handler = serverless(app);
+export default serverless(app);
